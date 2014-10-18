@@ -1,5 +1,5 @@
 # This program describes R functions used to cache potentially
-# time-consuming computations.
+# time-consuming computations
 # It is calculating the value of the inverse of the matrix.
  
 # The calculation of the inverse for a big matrix may take too 
@@ -38,7 +38,7 @@ makeCacheMatrix <- function(x = matrix()) {        # The input of this function 
 cacheSolve <- function(x, ...) {          #This input is an object  created by makeCacheMatrix function 
         ## Return a matrix that is the inverse of 'x'
         m <- x$getMatrixInverse()      # Here the function accesses the object 'x' and gets the value of the inverse of the matrix
-        if(!is.null(m)) {              #Checking whether the value of the matrix inverse is already cached (not NULL)
+        if(!is.null(m))  {              #Checking whether the value of the matrix inverse is already cached (not NULL)
                 message("getting cached data")   #if yes, this message is displayed
                 return(m)            # and the value of the matrix is returned
         }
